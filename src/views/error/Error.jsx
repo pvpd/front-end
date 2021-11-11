@@ -9,9 +9,7 @@ export const Error = ({ onRestart }) => (
             Error
         </Typography>
 
-        <Alert severity="error">
-            Uh oh, something went wrong. Please try again later.
-        </Alert>
+        <Alert severity="error">Uh oh, something went wrong. Please try again later.</Alert>
 
         <Navigation
             renderLeftButton={
