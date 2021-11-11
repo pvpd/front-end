@@ -5,7 +5,6 @@ const END_POINT = 'http://localhost:3001/api/submit';
 export const useSubmitApi = () => {
     const [error, setError] = useState(false);
     const [isFetching, setIsFetching] = useState(false);
-
     const [success, setSuccess] = useState(false);
 
     const post = async (userInfo) => {

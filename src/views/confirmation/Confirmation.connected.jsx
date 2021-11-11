@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { CircularProgress } from '@mui/material';
@@ -32,11 +32,7 @@ export const ConfirmationConnected = () => {
             {isFetching ? (
                 <CircularProgress />
             ) : (
-                <Confirmation
-                    user={user}
-                    onBack={handleBack}
-                    onSubmit={handleSubmit}
-                />
+                <Confirmation user={user} onBack={handleBack} onSubmit={handleSubmit} />
             )}
         </>
     );

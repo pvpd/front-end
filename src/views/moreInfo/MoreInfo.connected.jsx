@@ -30,11 +30,7 @@ export const MoreInfoConnected = () => {
             {!colors ? (
                 <CircularProgress />
             ) : (
-                <MoreInfo
-                    colors={colors}
-                    onNext={handleNext}
-                    onBack={handleBack}
-                />
+                <MoreInfo colors={colors} onNext={handleNext} onBack={handleBack} />
             )}
         </>
     );
