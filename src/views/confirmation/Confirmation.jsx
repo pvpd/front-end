@@ -17,15 +17,27 @@ export const Confirmation = ({ user, onBack, onSubmit }) => {
                 Confirmation
             </Typography>
 
-            <Typography variant="h6">First Name: {user?.name} </Typography>
-            <Typography variant="h6">E-Mail: {user?.email} </Typography>
-            <Typography variant="h6">
-                Password: {user?.password.replace(/./g, '*')}
-            </Typography>
-            <Typography variant="h6">Favorite color: {user?.color}</Typography>
-            <Typography variant="h6">
-                Terms and conditions: {user?.terms ? 'Agrees' : 'Not Agrees'}
-            </Typography>
+            <ul>
+                <li>
+                    <Typography variant="h6">First Name: {user?.name} </Typography>
+                </li>
+                <li>
+                    <Typography variant="h6">E-Mail: {user?.email} </Typography>
+                </li>
+                <li>
+                    <Typography variant="h6">
+                        Password: {user?.password.replace(/./g, '*')}
+                    </Typography>
+                </li>
+                <li>
+                    <Typography variant="h6">Favorite color: {user?.color}</Typography>
+                </li>
+                <li>
+                    <Typography variant="h6">
+                        Terms and conditions: {user?.terms ? 'Agrees' : 'Not Agrees'}
+                    </Typography>
+                </li>
+            </ul>
 
             <Navigation
                 renderLeftButton={

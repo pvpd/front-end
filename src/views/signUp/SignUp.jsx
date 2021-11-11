@@ -42,17 +42,13 @@ export const SignUp = ({ onNext }) => {
         if ('email' in fieldValues) {
             temp.email = fieldValues.email ? '' : 'This field is required.';
             if (fieldValues.email)
-                temp.email = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(
-                    fieldValues.email
-                )
+                temp.email = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(fieldValues.email)
                     ? ''
                     : 'Email is not valid.';
         }
 
         if ('password' in fieldValues)
-            temp.password = fieldValues.password
-                ? ''
-                : 'This field is required.';
+            temp.password = fieldValues.password ? '' : 'This field is required.';
 
         setErrors({
             ...temp,
@@ -61,7 +57,6 @@ export const SignUp = ({ onNext }) => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        console.log('validate');
         setValues({
             ...values,
             [name]: value,
